@@ -23,7 +23,7 @@ public class WorldManager : MonoBehaviour {
     [HideInInspector]
     public GameObject chunkHolder;
 
-    public Texture2D terrainTexture;
+    public Texture2D[] terrainTexture;
 
     int xSectors;
     int zSectors;
@@ -37,11 +37,22 @@ public class WorldManager : MonoBehaviour {
 
     public void Awake()
     {
+		//Load map textures
+		GetTextures();
         //get the flat hexagons size; we use this to space out the hexagons
         GetHexProperties();
         //generate the chunks of the world
         GenerateMap();
     }
+
+	void GetTextures(){
+		terrainTexture = new Texture2D[5];
+		terrainTexture[0] = Resources.Load("Textures/grassTexture") as Texture2D;
+		terrainTexture[1] = Resources.Load("Textures/stoneTexture") as Texture2D;
+		terrainTexture[2] = Resources.Load("Textures/sandTexture") as Texture2D;
+		terrainTexture[3] = Resources.Load("Textures/forestTexture") as Texture2D;
+		terrainTexture[4] = Resources.Load("Textures/lavaTexture") as Texture2D;
+	}
 
     /// <summary>
     /// Generates and caches a flat hexagon mesh for all the hexagon's to pull down into their localMesh, if they are flat
@@ -197,7 +208,7 @@ public class WorldManager : MonoBehaviour {
         //add the hexChunk script and set it's size
         chunkObj.AddComponent<HexChunk>();
         //set the texture map for this chunk and add the mesh renderer
-        chunkObj.AddComponent<MeshRenderer>().material.mainTexture = terrainTexture;
+        chunkObj.AddComponent<MeshRenderer>().material.mainTexture = terrainTexture[Random.Range(0,5)];
         //add the mesh filter
         chunkObj.AddComponent<MeshFilter>();
         //make this chunk a child of "ChunkHolder"s
