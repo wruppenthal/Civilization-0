@@ -18,6 +18,8 @@ public class HexInfo
 
     public Mesh localMesh;
 
+	public float atlasFraction = 0.25f;
+
 
     //basic hexagon mesh making
     public Vector3[] vertices;
@@ -55,10 +57,33 @@ public class HexInfo
 
         //pull mesh data from WorldManager
         localMesh.vertices = parentChunk.worldManager.flatHexagonSharedMesh.vertices;
-        localMesh.triangles = parentChunk.worldManager.flatHexagonSharedMesh.triangles;
-        localMesh.uv = parentChunk.worldManager.flatHexagonSharedMesh.uv;
 
-        //recalculate normals to play nicely with lighting
-        localMesh.RecalculateNormals();
+//		new Vector2(0,0.25f),
+//		new Vector2(0,0.75f),
+//		new Vector2(0.5f,1),
+//		new Vector2(1,0.75f),
+//		new Vector2(1,0.25f),
+//		new Vector2(0.5f,0),
+		
+		//Assign terrain randomly
+		localMesh.uv = null;
+		float rand = atlasFraction*Random.Range(0,3)*1f;
+		float tUnit = 0.25f;
+		Vector2[] temp = {
+			new Vector2(0,0.25f),
+			new Vector2(0,0.75f),
+			new Vector2(0.5f,1),
+			new Vector2(1,0.75f),
+			new Vector2(1,0.25f),
+			new Vector2(0.5f,0),
+		};
+		localMesh.uv = temp;
+		
+		localMesh.triangles = parentChunk.worldManager.flatHexagonSharedMesh.triangles;
+        
+
+		
+		//recalculate normals to play nicely with lighting
+		localMesh.RecalculateNormals();
     }
 }
