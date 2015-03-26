@@ -66,15 +66,16 @@ public class HexInfo
 //		new Vector2(0.5f,0),
 		
 		//Assign terrain randomly
-		float rand = atlasFraction*Random.Range(0,3)*1f;
+		float randx = Random.Range(0,3)*1f;
+		float randy = Random.Range(0,3)*1f;
 		float tUnit = 0.25f;
 		Vector2[] temp = {
-			new Vector2(rand*tUnit, tUnit*(rand + 0.25f)),
-			new Vector2(rand*tUnit, tUnit*(rand + 0.75f)),
-			new Vector2(tUnit*(rand + 0.5f),tUnit*(rand + 1f)),
-			new Vector2(tUnit*(rand + 1f),tUnit*(rand + 0.75f)),
-			new Vector2(tUnit*(rand + 1f),tUnit*(rand + 0.25f)),
-			new Vector2(tUnit*(rand + 0.5f),tUnit*rand),
+			new Vector2(randx*tUnit, tUnit*(randy + 0.25f)),
+			new Vector2(randx*tUnit, tUnit*(randy + 0.75f)),
+			new Vector2(tUnit*(randx + 0.5f),tUnit*(randy + 1f)),
+			new Vector2(tUnit*(randx + 1f),tUnit*(randy + 0.75f)),
+			new Vector2(tUnit*(randx + 1f),tUnit*(randy + 0.25f)),
+			new Vector2(tUnit*(randx + 0.5f),tUnit*randy),
 		};
 		localMesh.uv = temp;
 		
