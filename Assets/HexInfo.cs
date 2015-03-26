@@ -70,12 +70,12 @@ public class HexInfo
 		float rand = atlasFraction*Random.Range(0,3)*1f;
 		float tUnit = 0.25f;
 		Vector2[] temp = {
-			new Vector2(0,0.25f),
-			new Vector2(0,0.75f),
-			new Vector2(0.5f,1),
-			new Vector2(1,0.75f),
-			new Vector2(1,0.25f),
-			new Vector2(0.5f,0),
+			new Vector2(rand*tUnit, tUnit*(rand + 0.25f)),
+			new Vector2(rand*tUnit, tUnit*(rand + 0.75f)),
+			new Vector2(tUnit*(rand + 0.5f),tUnit*(rand + 1f)),
+			new Vector2(tUnit*(rand + 1f),tUnit*(rand + 0.75f)),
+			new Vector2(tUnit*(rand + 1f),tUnit*(rand + 0.25f)),
+			new Vector2(tUnit*(rand + 0.5f),tUnit*rand),
 		};
 		localMesh.uv = temp;
 		
