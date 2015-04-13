@@ -713,7 +713,7 @@ MonoBehaviour:
   chunkHolder: {fileID: 0}
   terrainTexture: {fileID: 2800000, guid: 24643d7cbf1364f9f8f9afa46ed2adaf, type: 3}
   mapSize: {x: 20, y: 20}
-  chunkSize: 4
+  chunkSize: 1
 --- !u!4 &1606365463
 Transform:
   m_ObjectHideFlags: 0
@@ -757,9 +757,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d771a965335794878af3f4425b3e3cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 6
-  verticalSpeed: 6
-  zoomSpeed: 6
+  horizontalSpeed: 10
+  verticalSpeed: 10
+  zoomSpeed: 10
 --- !u!81 &1998527587
 AudioListener:
   m_ObjectHideFlags: 0
