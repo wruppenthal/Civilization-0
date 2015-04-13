@@ -4,9 +4,9 @@ using System.Collections;
 public class CameraMovement : MonoBehaviour {
 	public float horizontalSpeed, verticalSpeed, zoomSpeed;
 	void Start () {
-//		horizontalSpeed = 4f;
-//		verticalSpeed = 4f;
-//		zoomSpeed=4f;
+		horizontalSpeed = 10f;
+		verticalSpeed = 10f;
+		zoomSpeed=10f;
 	}
 	// Update is called once per frame
 	void Update () {
