@@ -1,16 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WorldManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HexInfo.cs">
     <Files>
-      <File FileName="Assets/WorldManager.cs" Line="150" Column="23" />
-      <File FileName="Assets/HexChunk.cs" Line="20" Column="17" />
-      <File FileName="Assets/HexInfo.cs" Line="13" Column="1" />
+      <File FileName="Assets/WorldManager.cs" Line="108" Column="37" />
+      <File FileName="Assets/HexChunk.cs" Line="19" Column="2" />
+      <File FileName="Assets/HexInfo.cs" Line="73" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="CameraMovementC.cs" selected="True" />
+            <Node name="HexInfo.cs" selected="True" />
           </Node>
         </State>
       </Pad>
