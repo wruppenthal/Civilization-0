@@ -12,6 +12,7 @@ public class WorldManager : MonoBehaviour {
     [HideInInspector]
     public Mesh flatHexagonSharedMesh;
     public float hexRadiusSize;
+	public BoxCollider sweg;
 
     //hexInstances
     [HideInInspector]
@@ -37,9 +38,6 @@ public class WorldManager : MonoBehaviour {
 
     public void Awake()
     {
-		chunkSize = 8;
-		xSectors = 20;
-		zSectors = 20;
         //get the flat hexagons size; we use this to space out the hexagons
         GetHexProperties();
         //generate the chunks of the world

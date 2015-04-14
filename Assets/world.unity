@@ -687,6 +687,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1606365463}
   - 114: {fileID: 1606365462}
+  - 65: {fileID: 1606365464}
   m_Layer: 0
   m_Name: WorldManager
   m_TagString: Untagged
@@ -707,6 +708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flatHexagonSharedMesh: {fileID: 0}
   hexRadiusSize: 1
+  sweg: {fileID: 1606365464}
   hexExt: {x: 0, y: 0, z: 0}
   hexSize: {x: 0, y: 0, z: 0}
   hexCenter: {x: 0, y: 0, z: 0}
@@ -721,11 +723,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606365461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3.20000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!65 &1606365464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1606365461}
+  m_Material: {fileID: 13400000, guid: 67db31eead11e8d6d00011d98d76c639, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 1, z: 50}
+  m_Center: {x: 15, y: -1, z: 17.2999992}
 --- !u!1 &1998527585
 GameObject:
   m_ObjectHideFlags: 0
