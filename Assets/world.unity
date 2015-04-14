@@ -646,8 +646,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.39291, y: 14.3073416, z: 17.5305824}
-  m_Center: {x: -.51240921, y: -2.84632683, z: 1.2347188}
+  m_Size: {x: 22.6343632, y: 5.01694441, z: 18.9685192}
+  m_Center: {x: -.0705909729, y: 2.24068761, z: .515750051}
 --- !u!1 &1338175247 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100036, guid: 2d94bc9cfdef047a18e474b54a5d3d59, type: 3}
@@ -715,7 +715,7 @@ MonoBehaviour:
   chunkHolder: {fileID: 0}
   terrainTexture: {fileID: 2800000, guid: 24643d7cbf1364f9f8f9afa46ed2adaf, type: 3}
   mapSize: {x: 20, y: 20}
-  chunkSize: 1
+  chunkSize: 8
 --- !u!4 &1606365463
 Transform:
   m_ObjectHideFlags: 0
@@ -753,6 +753,7 @@ GameObject:
   - 124: {fileID: 1998527588}
   - 81: {fileID: 1998527587}
   - 114: {fileID: 1998527586}
+  - 114: {fileID: 1998527592}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -839,3 +840,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1998527592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998527585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56cb6ad9c0dd44af918f7318fb5d4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

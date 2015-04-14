@@ -1,16 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WorldManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BasicScript.cs">
     <Files>
-      <File FileName="Assets/SelectUnit.cs" Line="8" Column="2" />
-      <File FileName="Assets/WorldManager.cs" Line="46" Column="23" />
+      <File FileName="Assets/SelectUnit.cs" Line="22" Column="5" />
+      <File FileName="Assets/WorldManager.cs" Line="40" Column="6" />
       <File FileName="Assets/HexInfo.cs" Line="12" Column="34" />
+      <File FileName="Assets/HexChunk.cs" Line="1" Column="1" />
+      <File FileName="Assets/BasicScript.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="WorldManager.cs" selected="True" />
+            <Node name="BasicScript.cs" selected="True" />
           </Node>
         </State>
       </Pad>
