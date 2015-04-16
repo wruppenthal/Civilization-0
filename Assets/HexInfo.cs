@@ -18,13 +18,26 @@ public class HexInfo
 
     public Mesh localMesh;
 
-	public float atlasFraction = 0.25f;
+	public bool clicked;
+	public float randy;
+	public float randx;
 
 
     //basic hexagon mesh making
     public Vector3[] vertices;
     public Vector2[] uv;
     public int[] triangles;
+
+//	public HexInfo (bool asdf){
+//		if(asdf){
+//			randy = 2f;
+//			randx = 3f;
+//		}
+//	}
+//
+//	public HexInfo(){
+//		clicked = false;
+//	}
 
     //get axial grid position
     public Vector2 AxialGridPosition
@@ -50,8 +63,9 @@ public class HexInfo
     /// <summary>
     /// This pulls the cached hexagon mesh data from the WorldManager down into our localMesh
     /// </summary>
-    private void MeshSetup()
+    public void MeshSetup()
     {
+
         //create new mesh to start fresh
         localMesh = new Mesh();
 
@@ -66,8 +80,19 @@ public class HexInfo
 //		new Vector2(0.5f,0),
 		
 		//Assign terrain randomly
-		float randx = Random.Range(0,3)*1f;
-		float randy = Random.Range(0,3)*1f;
+		if(!this.clicked){
+			randx = 0f;
+			randy = 0f;
+			do{
+				randx = Random.Range(0,3)*1f;
+				randy = Random.Range(0,3)*1f;
+			}while(randx == 3f && randy == 2f);
+		}
+		else{
+			randx = 2f;
+			randy = 4f;
+		}
+
 		float tUnit = 0.25f;
 		Vector2[] temp = {
 			new Vector2(randx*tUnit, tUnit*(randy + 0.25f)),

@@ -17,8 +17,8 @@ public class HexChunk : MonoBehaviour
     public int ySector;
     public WorldManager worldManager;
 
-    private MeshFilter filter;
-    private new BoxCollider collider;
+    public MeshFilter filter;
+    public new BoxCollider collider;
     #endregion
 
     /// <summary>
@@ -84,7 +84,7 @@ public class HexChunk : MonoBehaviour
         collider.size = filter.mesh.bounds.size;
     }
 
-    private void Combine()
+    public void Combine()
     {
         //make a two-dimensional array to remain constant with our hexArray
         CombineInstance[,] combine = new CombineInstance[(int)chunkSize.x, (int)chunkSize.y];
@@ -108,6 +108,8 @@ public class HexChunk : MonoBehaviour
         //get the filter on the chunk gameObject
         filter = gameObject.GetComponent<MeshFilter>();
         //create a new mesh on it
+		if(filter.mesh != null)
+			Destroy(filter.mesh);
         filter.mesh = new Mesh();
 
         //convert our two-dimensional array into a normal array so that we can use mesh.CombineMeshes()

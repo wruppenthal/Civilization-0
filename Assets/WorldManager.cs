@@ -29,7 +29,7 @@ public class WorldManager : MonoBehaviour {
     int xSectors;
     int zSectors;
 
-    public HexChunk[,] hexChunks;
+    public static HexChunk[,] hexChunks;
 
     public Vector2 mapSize;
     public int chunkSize;
