@@ -84,13 +84,13 @@ public class HexInfo
 			randx = 0f;
 			randy = 0f;
 			do{
-				randx = Random.Range(0,3)*1f;
-				randy = Random.Range(0,3)*1f;
-			}while(randx == 3f && randy == 2f);
+				randx = Random.Range(0,4)*1f;
+				randy = Random.Range(0,4)*1f;
+			}while(randx == 3f && randy == 1f);
 		}
 		else{
-			randx = 2f;
-			randy = 4f;
+			randx = 3f;
+			randy = 1f;
 		}
 
 		float tUnit = 0.25f;
